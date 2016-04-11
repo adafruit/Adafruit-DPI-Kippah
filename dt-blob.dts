@@ -282,8 +282,39 @@
                startup_state = "inactive";
                function = "input";
             }; // pin
-            pin@p14 { function = "uart0";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // TX uart0
-            pin@p15 { function = "uart0";  termination = "pull_up"; drive_strength_mA = < 8 >; }; // RX uart0
+            // GPIOCONFIG: configure GPIO for 24-bit DPI interface
+            pin@p0 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // CLK
+            pin@p1 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // DEN
+            pin@p2 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // VSYNC
+            pin@p3 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // HSYNC
+            pin@p4 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B0
+            pin@p5 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B1
+            pin@p6 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B2
+            pin@p7 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B3
+            pin@p8 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B4
+            pin@p9 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B5
+            pin@p10 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B6
+            pin@p11 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B7
+            pin@p12 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G0
+            pin@p13 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G1
+            pin@p14 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G2
+            pin@p15 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G3
+            pin@p16 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G4
+            pin@p17 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G5
+            pin@p18 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G6
+            pin@p19 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G7
+            pin@p20 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R0
+            pin@p21 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R1
+            pin@p22 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R2
+            pin@p23 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R3
+            pin@p24 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R4
+            pin@p25 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R5
+            pin@p26 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R6
+            pin@p27 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R7
+            // end GPIOCONFIG; leave the rest untouched!
+
+	    //pin@p14 { function = "uart0";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // TX uart0
+            //pin@p15 { function = "uart0";  termination = "pull_up"; drive_strength_mA = < 8 >; }; // RX uart0
             pin@p28 { function = "i2c0";   termination = "pull_up";    }; // I2C 0 SDA
             pin@p29 { function = "i2c0";   termination = "pull_up";    }; // I2C 0 SCL
             pin@p31 { function = "input";  termination = "no_pulling"; polarity = "active_low"; }; // Power low
@@ -424,8 +455,39 @@
                startup_state = "inactive";
                function = "input";
             }; // pin
-            pin@p14 { function = "uart0";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // TX uart0
-            pin@p15 { function = "uart0";  termination = "pull_up"; drive_strength_mA = < 8 >; }; // RX uart0
+            // GPIOCONFIG: configure GPIO for 24-bit DPI interface
+            pin@p0 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // CLK
+            pin@p1 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // DEN
+            pin@p2 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // VSYNC
+            pin@p3 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // HSYNC
+            pin@p4 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B0
+            pin@p5 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B1
+            pin@p6 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B2
+            pin@p7 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B3
+            pin@p8 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B4
+            pin@p9 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B5
+            pin@p10 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B6
+            pin@p11 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B7
+            pin@p12 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G0
+            pin@p13 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G1
+            pin@p14 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G2
+            pin@p15 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G3
+            pin@p16 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G4
+            pin@p17 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G5
+            pin@p18 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G6
+            pin@p19 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G7
+            pin@p20 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R0
+            pin@p21 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R1
+            pin@p22 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R2
+            pin@p23 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R3
+            pin@p24 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R4
+            pin@p25 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R5
+            pin@p26 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R6
+            pin@p27 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R7
+            // end GPIOCONFIG; leave the rest untouched!
+
+	    //pin@p14 { function = "uart0";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // TX uart0
+            //pin@p15 { function = "uart0";  termination = "pull_up"; drive_strength_mA = < 8 >; }; // RX uart0
             pin@p28 { function = "i2c0";   termination = "pull_up";    }; // I2C 0 SDA
             pin@p29 { function = "i2c0";   termination = "pull_up";    }; // I2C 0 SCL
             pin@p31 { function = "output"; termination = "pull_down"; }; // LAN_RUN
@@ -566,8 +628,39 @@
                startup_state = "inactive";
                function = "input";
             }; // pin
-            pin@p14 { function = "uart0";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // TX uart0
-            pin@p15 { function = "uart0";  termination = "pull_up"; drive_strength_mA = < 8 >; }; // RX uart0
+            // GPIOCONFIG: configure GPIO for 24-bit DPI interface
+            pin@p0 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // CLK
+            pin@p1 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // DEN
+            pin@p2 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // VSYNC
+            pin@p3 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // HSYNC
+            pin@p4 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B0
+            pin@p5 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B1
+            pin@p6 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B2
+            pin@p7 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B3
+            pin@p8 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B4
+            pin@p9 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B5
+            pin@p10 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B6
+            pin@p11 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B7
+            pin@p12 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G0
+            pin@p13 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G1
+            pin@p14 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G2
+            pin@p15 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G3
+            pin@p16 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G4
+            pin@p17 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G5
+            pin@p18 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G6
+            pin@p19 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G7
+            pin@p20 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R0
+            pin@p21 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R1
+            pin@p22 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R2
+            pin@p23 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R3
+            pin@p24 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R4
+            pin@p25 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R5
+            pin@p26 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R6
+            pin@p27 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R7
+            // end GPIOCONFIG; leave the rest untouched!
+
+	    //pin@p14 { function = "uart0";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // TX uart0
+            //pin@p15 { function = "uart0";  termination = "pull_up"; drive_strength_mA = < 8 >; }; // RX uart0
             pin@p28 { function = "i2c0";   termination = "pull_up";    }; // I2C 0 SDA
             pin@p29 { function = "i2c0";   termination = "pull_up";    }; // I2C 0 SCL
             pin@p32 { function = "output"; termination = "pull_down"; }; // Camera LED
@@ -704,8 +797,39 @@
                startup_state = "inactive";
                function = "input";
             }; // pin
-            pin@p14 { function = "uart0";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // TX uart0
-            pin@p15 { function = "uart0";  termination = "pull_up"; drive_strength_mA = < 8 >; }; // RX uart0
+            // GPIOCONFIG: configure GPIO for 24-bit DPI interface
+            pin@p0 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // CLK
+            pin@p1 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // DEN
+            pin@p2 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // VSYNC
+            pin@p3 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // HSYNC
+            pin@p4 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B0
+            pin@p5 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B1
+            pin@p6 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B2
+            pin@p7 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B3
+            pin@p8 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B4
+            pin@p9 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B5
+            pin@p10 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B6
+            pin@p11 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B7
+            pin@p12 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G0
+            pin@p13 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G1
+            pin@p14 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G2
+            pin@p15 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G3
+            pin@p16 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G4
+            pin@p17 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G5
+            pin@p18 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G6
+            pin@p19 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G7
+            pin@p20 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R0
+            pin@p21 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R1
+            pin@p22 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R2
+            pin@p23 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R3
+            pin@p24 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R4
+            pin@p25 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R5
+            pin@p26 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R6
+            pin@p27 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R7
+            // end GPIOCONFIG; leave the rest untouched!
+
+	    //pin@p14 { function = "uart0";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // TX uart0
+            //pin@p15 { function = "uart0";  termination = "pull_up"; drive_strength_mA = < 8 >; }; // RX uart0
             pin@p28 { function = "i2c0";   termination = "pull_up";    }; // I2C 0 SDA / SMPS_SDA
             pin@p29 { function = "i2c0";   termination = "pull_up";    }; // I2C 0 SCL / SMPS_SCL
             pin@p31 { function = "output"; termination = "pull_down"; }; // LAN_RUN
@@ -848,8 +972,40 @@
                startup_state = "inactive";
                function = "input";
             }; // pin
-            pin@p14 { function = "uart0";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // TX uart0
-            pin@p15 { function = "uart0";  termination = "pull_up"; drive_strength_mA = < 8 >; }; // RX uart0
+            // GPIOCONFIG: configure GPIO for 24-bit DPI interface
+            pin@p0 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // CLK
+            pin@p1 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // DEN
+            pin@p2 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // VSYNC
+            pin@p3 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // HSYNC
+            pin@p4 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B0
+            pin@p5 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B1
+            pin@p6 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B2
+            pin@p7 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B3
+            pin@p8 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B4
+            pin@p9 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B5
+            pin@p10 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B6
+            pin@p11 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B7
+            pin@p12 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G0
+            pin@p13 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G1
+            pin@p14 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G2
+            pin@p15 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G3
+            pin@p16 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G4
+            pin@p17 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G5
+            pin@p18 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G6
+            pin@p19 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G7
+            pin@p20 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R0
+            pin@p21 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R1
+            pin@p22 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R2
+            pin@p23 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R3
+            pin@p24 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R4
+            pin@p25 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R5
+            pin@p26 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R6
+            pin@p27 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R7
+            // end GPIOCONFIG; leave the rest untouched!
+
+	    //pin@p14 { function = "uart0";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // TX uart0
+            //pin@p15 { function = "uart0";  termination = "pull_up"; drive_strength_mA = < 8 >; }; // RX uart0
+
             // The firmware changes I2C pin functions on the fly, returning them to inputs when done. But pins 28&29 are
             // not used on a 1.1 Pi2, so the I2C0 function ends up multiply mapped (bad). therefore don't statically map.
             // pin@p28 { function = "i2c0";   termination = "pull_up";    }; // I2C 0 SDA
@@ -997,8 +1153,39 @@
                startup_state = "inactive";
                function = "input";
             }; // pin
-            pin@p14 { function = "uart0";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // TX uart0
-            pin@p15 { function = "uart0";  termination = "pull_up"; drive_strength_mA = < 8 >; }; // RX uart0
+            // GPIOCONFIG: configure GPIO for 24-bit DPI interface
+            pin@p0 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // CLK
+            pin@p1 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // DEN
+            pin@p2 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // VSYNC
+            pin@p3 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // HSYNC
+            pin@p4 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B0
+            pin@p5 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B1
+            pin@p6 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B2
+            pin@p7 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B3
+            pin@p8 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B4
+            pin@p9 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B5
+            pin@p10 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B6
+            pin@p11 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B7
+            pin@p12 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G0
+            pin@p13 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G1
+            pin@p14 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G2
+            pin@p15 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G3
+            pin@p16 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G4
+            pin@p17 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G5
+            pin@p18 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G6
+            pin@p19 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G7
+            pin@p20 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R0
+            pin@p21 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R1
+            pin@p22 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R2
+            pin@p23 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R3
+            pin@p24 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R4
+            pin@p25 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R5
+            pin@p26 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R6
+            pin@p27 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R7
+            // end GPIOCONFIG; leave the rest untouched!
+
+	    //pin@p14 { function = "uart0";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // TX uart0
+            //pin@p15 { function = "uart0";  termination = "pull_up"; drive_strength_mA = < 8 >; }; // RX uart0
             pin@p40 { function = "pwm";    termination = "no_pulling"; drive_strength_mA = < 16 >; }; // Right audio
             pin@p41 { function = "pwm";    termination = "no_pulling"; drive_strength_mA = < 16 >; }; // Left audio
             pin@p42 { function = "gp_clk"; termination = "pull_down"; }; // ETH_CLK - Ethernet 25MHz output
@@ -1412,8 +1599,39 @@
                startup_state = "inactive";
                function = "input";
             }; // pin
-            pin@p14 { function = "uart0";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // TX uart0
-            pin@p15 { function = "uart0";  termination = "pull_up"; drive_strength_mA = < 8 >; }; // RX uart0
+            // GPIOCONFIG: configure GPIO for 24-bit DPI interface
+            pin@p0 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // CLK
+            pin@p1 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // DEN
+            pin@p2 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // VSYNC
+            pin@p3 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // HSYNC
+            pin@p4 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B0
+            pin@p5 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B1
+            pin@p6 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B2
+            pin@p7 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B3
+            pin@p8 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B4
+            pin@p9 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B5
+            pin@p10 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B6
+            pin@p11 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B7
+            pin@p12 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G0
+            pin@p13 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G1
+            pin@p14 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G2
+            pin@p15 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G3
+            pin@p16 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G4
+            pin@p17 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G5
+            pin@p18 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G6
+            pin@p19 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G7
+            pin@p20 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R0
+            pin@p21 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R1
+            pin@p22 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R2
+            pin@p23 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R3
+            pin@p24 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R4
+            pin@p25 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R5
+            pin@p26 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R6
+            pin@p27 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R7
+            // end GPIOCONFIG; leave the rest untouched!
+
+	    //pin@p14 { function = "uart0";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // TX uart0
+            //pin@p15 { function = "uart0";  termination = "pull_up"; drive_strength_mA = < 8 >; }; // RX uart0
             pin@p46 { function = "input";  termination = "no_pulling"; polarity = "active_low"; }; // Hotplug
             pin@p47 { function = "output"; termination = "pull_up"; polarity="active_low"; }; // activity LED
             pin@p48 { function = "sdcard"; termination = "pull_up";    drive_strength_mA = < 8 >; }; // SD CLK
