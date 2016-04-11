@@ -1,0 +1,182 @@
+# For more options and information see
+# http://www.raspberrypi.org/documentation/configuration/config-txt.md
+# Some settings may impact device functionality. See link above for details
+
+# uncomment if you get no picture on HDMI for a default "safe" mode
+#hdmi_safe=1
+
+# uncomment this if your display has a black border of unused pixels visible
+# and your display can output without overscan
+#disable_overscan=1
+
+# uncomment the following to adjust overscan. Use positive numbers if console
+# goes off screen, and negative if there is too much border
+#overscan_left=16
+#overscan_right=16
+#overscan_top=16
+#overscan_bottom=16
+
+# uncomment to force a console size. By default it will be display's size minus
+# overscan.
+#framebuffer_width=1280
+#framebuffer_height=720
+
+# uncomment if hdmi display is not detected and composite is being output
+#hdmi_force_hotplug=1
+
+# uncomment to force a specific HDMI mode (this will force VGA)
+#hdmi_group=1
+#hdmi_mode=1
+
+# uncomment to force a HDMI mode rather than DVI. This can make audio work in
+# DMT (computer monitor) modes
+#hdmi_drive=2
+
+# uncomment to increase signal to HDMI, if you have interference, blanking, or
+# no display
+#config_hdmi_boost=4
+
+# uncomment for composite PAL
+#sdtv_mode=2
+
+#uncomment to overclock the arm. 700 MHz is the default.
+#arm_freq=800
+
+# Uncomment some or all of these to enable the optional hardware interfaces
+#dtparam=i2c_arm=on
+#dtparam=i2s=on
+#dtparam=spi=on
+
+# Uncomment this to enable the lirc-rpi module
+#dtoverlay=lirc-rpi
+
+# Additional overlays and parameters are documented /boot/overlays/README
+
+# Enable audio (loads snd_bcm2835)
+dtparam=audio=on
+#core_freq=250
+#dtoverlay=pi3-disable-bt
+
+# Disable spi and i2c, we need these pins.
+dtparam=spi=off
+dtparam=i2c_arm=off
+
+# Set screen size and any overscan required
+overscan_left=0
+overscan_right=0
+overscan_top=0
+overscan_bottom=0
+framebuffer_width=800
+framebuffer_height=480
+     
+# enable the DPI display
+enable_dpi_lcd=1
+display_default_lcd=1
+
+# set up the size to 800x480
+dpi_group=2
+dpi_mode=87
+
+# ---------------------------------------------
+# DPI output format definitions
+# https://www.raspberrypi.org/forums/viewtopic.php?p=628061#p628061
+# DPI structure: https://www.raspberrypi.org/forums/viewtopic.php?p=617719#p617719
+# ---------------------------------------------
+# output_format:
+#   1: DPI_OUTPUT_FORMAT_9BIT_666
+#   2: DPI_OUTPUT_FORMAT_16BIT_565_CFG1
+#   3: DPI_OUTPUT_FORMAT_16BIT_565_CFG2
+#   4: DPI_OUTPUT_FORMAT_16BIT_565_CFG3
+#   5: DPI_OUTPUT_FORMAT_18BIT_666_CFG1
+#   6: DPI_OUTPUT_FORMAT_18BIT_666_CFG2
+#   7: DPI_OUTPUT_FORMAT_24BIT_888
+#
+# rgb_order:
+#   1: DPI_RGB_ORDER_RGB
+#   2: DPI_RGB_ORDER_BGR
+#   3: DPI_RGB_ORDER_GRB
+#   4: DPI_RGB_ORDER_BRG
+#
+# output_enable_mode:
+#   0: DPI_OUTPUT_ENABLE_MODE_DATA_VALID
+#   1: DPI_OUTPUT_ENABLE_MODE_COMBINED_SYNCS
+#
+# invert_pixel_clock:
+#   0: RGB Data changes on rising edge and is stable at falling edge
+#   1: RGB Data changes on falling edge and is stable at rising edge
+#
+# hsync polarity:
+#   0: default for HDMI mode
+#   1: inverted
+#
+# vsync polarity:
+#   0: default for HDMI mode
+#   1: inverted
+#
+# output_enable_polarity:
+#   0: default for HDMI mode
+#   1: inverted
+#
+# hsync phase:
+#   0: rising edge
+#   1: falling edge
+#
+# vsync phase:
+#   0: rising edge
+#   1: falling edge
+#
+# output_enable phase:
+#   0: rising edge
+#   1: falling edge
+# ---------------------------------------------
+dpi_output_format=454661
+
+# ---------------------------------------------
+# HDMI timing definitions
+#https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=24679
+# ---------------------------------------------
+# hdmi_timings= 
+#      <h_active_pixels>
+#        LCD module horizontal resolution
+#
+#      <h_sync_polarity>
+#        0: active low
+#        1: active high
+#
+#      <h_front_porch>
+#      <h_sync_pulse>
+#      <h_back_porch>
+#      <v_active_lines>
+#        LCD module vertical resolution
+#
+#      <v_sync_polarity>
+#        0: active low
+#        1: active high
+#
+#      <v_front_porch>
+#      <v_sync_pulse>
+#      <v_back_porch>
+#
+#      <v_sync_offset_a>
+#      <v_sync_offset_b>
+#      <pixel_rep>
+#
+#      <frame_rate>
+#        screen refrech rate (50/60Hz supported only!)#
+#
+#      <interlaced>
+#
+#      <pixel_freq>
+#        calculates as: <h_active_pixels> * <v_active_lines> * <frame_rate>
+#
+#      <aspect_ratio>
+#        HDMI_ASPECT_4_3 = 1
+#        HDMI_ASPECT_14_9 = 2
+#        HDMI_ASPECT_16_9 = 3
+#        HDMI_ASPECT_5_4 = 4
+#        HDMI_ASPECT_16_10 = 5
+#        HDMI_ASPECT_15_9 = 6
+#        HDMI_ASPECT_21_9 = 7
+#        HDMI_ASPECT_64_27 = 8
+# ---------------------------------------------
+hdmi_timings=800 0 40 48 88 480 0 13 3 32 0 0 0 60 0 32000000 6
