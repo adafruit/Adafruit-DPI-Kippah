@@ -1919,6 +1919,184 @@
          }; // pin_defines
       }; // pins
 
+ pins_pi0w { // Pi zero W
+         pin_config {
+            pin@default {
+               polarity = "active_high";
+               termination = "pull_down";
+               startup_state = "inactive";
+               function = "input";
+            }; // pin
+            // GPIOCONFIG: configure GPIO for 24-bit DPI interface
+            pin@p0 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // CLK
+            pin@p1 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // DEN
+            pin@p2 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // VSYNC
+            pin@p3 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // HSYNC
+            pin@p4 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B0
+            pin@p5 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B1
+            pin@p6 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B2
+            pin@p7 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B3
+            pin@p8 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B4
+            pin@p9 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B5
+            pin@p10 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B6
+            pin@p11 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // B7
+            pin@p12 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G0
+            pin@p13 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G1
+            pin@p14 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G2
+            pin@p15 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G3
+            pin@p16 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G4
+            pin@p17 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G5
+            pin@p18 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G6
+            pin@p19 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // G7
+            pin@p20 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R0
+            pin@p21 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R1
+            pin@p22 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R2
+            pin@p23 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R3
+            pin@p24 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R4
+            pin@p25 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R5
+            pin@p26 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R6
+            pin@p27 { function = "dpi";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // R7
+            // end GPIOCONFIG; leave the rest untouched!
+
+            //pin@p14 { function = "uart0";  termination = "no_pulling"; drive_strength_mA = < 8 >; }; // TX uart0
+            //pin@p15 { function = "uart0";  termination = "pull_up"; drive_strength_mA = < 8 >; }; // RX uart0
+            pin@p28 { function = "input";   termination = "pull_up";    }; // I2C 0 SDA
+            pin@p29 { function = "input";   termination = "pull_up";    }; // I2C 0 SCL
+            pin@p34 { function = "input";  termination = "pull_up";    drive_strength_mA = < 8 >; };
+            pin@p35 { function = "input";  termination = "pull_up";    drive_strength_mA = < 8 >; };
+            pin@p36 { function = "input";  termination = "pull_up";    drive_strength_mA = < 8 >; };
+            pin@p37 { function = "input";  termination = "pull_up";    drive_strength_mA = < 8 >; };
+            pin@p38 { function = "input";  termination = "pull_up";    drive_strength_mA = < 8 >; };
+            pin@p39 { function = "input";  termination = "pull_up";    drive_strength_mA = < 8 >; };
+            pin@p40 { function = "output"; termination = "pull_down"; }; // Camera LED
+            pin@p41 { function = "output"; termination = "no_pulling"; }; // WL_ON
+            pin@p43 { function = "gp_clk"; termination = "pull_down"; }; // WIFI_CLK - Wifi 32kHz output
+            pin@p44 { function = "output"; termination = "no_pulling"; }; // Camera shutdown
+            pin@p45 { function = "output"; termination = "no_pulling"; }; // BT_ON
+            pin@p46 { function = "input";  termination = "no_pulling"; polarity = "active_low"; }; // Hotplug
+            pin@p47 { function = "output"; termination = "pull_up"; polarity="active_low"; }; // activity LED
+            pin@p48 { function = "sdcard"; termination = "pull_up";    drive_strength_mA = < 8 >; }; // SD CLK
+            pin@p49 { function = "sdcard"; termination = "pull_up";    drive_strength_mA = < 8 >; }; // SD CMD
+            pin@p50 { function = "sdcard"; termination = "pull_up";    drive_strength_mA = < 8 >; }; // SD D0
+            pin@p51 { function = "sdcard"; termination = "pull_up";    drive_strength_mA = < 8 >; }; // SD D1
+            pin@p52 { function = "sdcard"; termination = "pull_up";    drive_strength_mA = < 8 >; }; // SD D2
+            pin@p53 { function = "sdcard"; termination = "pull_up";    drive_strength_mA = < 8 >; }; // SD D3
+         }; // pin_config
+
+         pin_defines {
+            pin_define@HDMI_CONTROL_ATTACHED {
+               type = "internal";
+               number = <46>;
+            };
+            pin_define@NUM_CAMERAS {
+               type = "internal";
+               number = <1>;
+            };
+            pin_define@CAMERA_0_I2C_PORT {
+               type = "internal";
+               number = <0>;
+            };
+            pin_define@CAMERA_0_SDA_PIN {
+               type = "internal";
+               number = <28>;
+            };
+            pin_define@CAMERA_0_SCL_PIN {
+               type = "internal";
+               number = <29>;
+            };
+            pin_define@CAMERA_0_SHUTDOWN {
+               type = "internal";
+               number = <44>;
+            };
+            pin_define@CAMERA_0_UNICAM_PORT {
+               type = "internal";
+               number = <1>;
+            };
+            pin_define@CAMERA_0_LED {
+               type = "internal";
+               number = <40>;
+            };
+            pin_define@FLASH_0_ENABLE {
+               type = "absent";
+            };
+            pin_define@FLASH_0_INDICATOR {
+               type = "absent";
+            };
+            pin_define@FLASH_1_ENABLE {
+               type = "absent";
+            };
+            pin_define@FLASH_1_INDICATOR {
+               type = "absent";
+            };
+            pin_define@POWER_LOW {
+               type = "absent";
+            };
+            pin_define@LEDS_DISK_ACTIVITY {
+               type = "internal";
+               number = <47>;
+            };
+            pin_define@LAN_RUN {
+               type = "absent";
+            };
+            pin_define@BT_ON {
+               type = "internal";
+               number = <45>;
+            };
+            pin_define@WL_ON {
+               type = "internal";
+               number = <41>;
+            };
+            pin_define@WL_LPO_CLK {
+               type = "internal";
+               number = <43>;
+            };
+            pin_define@SMPS_SDA {
+               type = "absent";
+            };
+            pin_define@SMPS_SCL {
+               type = "absent";
+            };
+            pin_define@ETH_CLK {
+               type = "absent";
+            };
+            pin_define@USB_LIMIT_1A2 {
+               type = "absent";
+            };
+            pin_define@SIO_1V8_SEL {
+               type = "absent";
+            };
+            pin_define@PWML {
+               type = "absent";
+            };
+            pin_define@PWMR {
+               type = "absent";
+            };
+            pin_define@SAFE_MODE {
+               type = "absent";
+            };
+            pin_define@SD_CARD_DETECT {
+               type = "absent";
+            };
+            pin_define@ID_SDA {
+               type = "internal";
+               number = <0>;
+            };
+            pin_define@ID_SCL {
+               type = "internal";
+               number = <1>;
+            };
+            pin_define@DISPLAY_I2C_PORT {
+               type = "absent";
+            };
+            pin_define@DISPLAY_SDA {
+               type = "absent";
+            };
+            pin_define@DISPLAY_SCL {
+               type = "absent";
+            };
+         }; // pin_defines
+      }; // pins
+
       pins_cm {
          pin_config {
             pin@default {
